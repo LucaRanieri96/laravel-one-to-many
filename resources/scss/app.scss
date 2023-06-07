@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
 
      nav{
-       color: black;
+       color: rgb(0, 0, 0);
 
        a{
         font-size: 1.2rem !important;
@@ -34,9 +34,15 @@ body {
   }
 }
 
-main{
+.profile{
   h2{
     font-size: 3rem;
+  }
+  li{
+    a{
+      color: white;
+      font-size: 1.5rem;
+    }
   }
   
 }

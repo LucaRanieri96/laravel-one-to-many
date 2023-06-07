@@ -9,8 +9,8 @@
         </div>
     @endif
 
-    <div class="table-responsive rounded overflow-hidden mb-3">
-        <table class="table table-primary align-middle text-center mb-0">
+    <div class="table-responsive rounded mb-3">
+        <table class="table table-striped">
             <thead>
                 <tr class="align-middle">
                     <th scope="col">ID</th>
@@ -38,7 +38,7 @@
                             </a>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#modal-{{ $project->id }}">
-                                DELETE
+                                <i class="fa-regular fa-trash-can fa-fw"></i>
                             </button>
                             <!-- Modal -->
                         </td>

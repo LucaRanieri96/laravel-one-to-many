@@ -30,7 +30,7 @@
 
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container-fluid px-5">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                   <img src="{{ asset('imgs/tobyfoxsleep.gif') }}" alt="">
                 </a>
@@ -77,8 +77,8 @@
             </div>
         </nav>
 
-        <main>
-            <div class="container">
+        <main  class="profile">
+            <div class="container-fluid px-5">
                 <h2 class="my-4">
                     Your Profile
                 </h2>
@@ -87,12 +87,12 @@
                         <ul class="list-unstyled">
                             <li
                                 class="p-3 rounded-3 mb-3 {{ Route::currentRouteName() === 'admin.dashboard' ? 'bg-primary' : '' }}">
-                                <a class="text-dark fw-bold text-decoration-none"
+                                <a class="fw-bold text-decoration-none"
                                     href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             <li
                                 class="p-3 rounded-3 {{ str_starts_with(Route::currentRouteName(), 'admin.projects') ? 'bg-primary' : '' }}">
-                                <a class="text-dark fw-bold text-decoration-none"
+                                <a class="fw-bold text-decoration-none"
                                     href="{{ route('admin.projects.index') }}">Projects</a>
                             </li>
                         </ul>
