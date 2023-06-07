@@ -27,6 +27,17 @@
     @enderror
     
   </div>
+
+  <div class="mb-3">
+    <label for="type_id" class="form-label">Types</label>
+    <select class="form-select" name="type_id" id="type_id">
+      <option value="">Select a type</option>
+      @foreach ($types as $type)
+      <option value="{{ $type->id }}" {{ $type->id == old('type_id', $project->type->id) ? 'selected' : ''}}>{{ $type->name }}</option>
+      @endforeach
+    </select>
+
+  </div>
   
   <button type="submit" class="btn btn-primary">Edit project</button>
   <button type="reset" class="btn btn-danger">Reset fields</button>

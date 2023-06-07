@@ -27,6 +27,8 @@ class UpdateProjectRequest extends FormRequest
             'name'=>'required',
             'repoUrl'=>'nullable',
             'startingDate'=>'nullable',
+            'type_id'=> ['exists:types,id'] 
+
         ];
     }
 }
