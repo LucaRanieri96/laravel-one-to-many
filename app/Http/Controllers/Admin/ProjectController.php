@@ -102,7 +102,7 @@ class ProjectController extends Controller
 
         $valData["startingDate"] = date("Y-m-d") . " " . date("H:i:s");
 
-        Project::create($valData);
+        Project::update($valData);
 
         return to_route("admin.projects.index")->with("message", "Project successfully inserted");
     }

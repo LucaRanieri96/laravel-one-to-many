@@ -12,7 +12,7 @@
 
 @endif
 
-<form action="{{ route('admin.projects.update', $project->id) }}" method="post">
+<form action="{{ route('admin.projects.update', $project->slug) }}" method="post">
 
   @csrf
   @method("PUT")
@@ -36,6 +36,16 @@
       <option value="{{ $type->id }}" {{ $type->id == old('type_id', $project->type->id) ? 'selected' : ''}}>{{ $type->name }}</option>
       @endforeach
     </select>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="type_id" class="form-label">Starting Date</label>
+    <input type="date" name="startingDate" id="startingDate" class="form-control @error('startingDate') is-invalid @enderror" value="{{ old('startingDate') }}" placeholder="Project startingDate">
+    
+    @error('startingDate')
+    <small class="text-danger">Please, fill the field correctly</small>
+    @enderror
 
   </div>
   

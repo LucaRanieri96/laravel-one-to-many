@@ -17,6 +17,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Repository URL</th>
                     <th scope="col">Starting date</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
@@ -27,6 +28,7 @@
                         <td scope="row">{{ $project->slug }}</td>
                         <td scope="row">{{ $project->repoUrl }}</td>
                         <td scope="row">{{ $project->startingDate }}</td>
+                        <td scope="row"><span class="badge bg-dark"> {{ $project->type?->name }}</span></td>
                         <td scope="row">
                             <a class="btn btn-success" href="{{ route('admin.projects.show', $project->slug) }}">
                                 <i class="fa-regular fa-eye fa-fw"></i>

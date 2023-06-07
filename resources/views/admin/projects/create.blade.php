@@ -27,12 +27,26 @@
 
   <div class="mb-3">
     <label for="type_id" class="form-label">Types</label>
-    <select class="form-select" name="type_id" id="type_id">
+    <select class="form-select @error('type') is-invalid @enderror" name="type_id" id="type_id">
       <option value="">Select a type</option>
       @foreach ($types as $type)
       <option value="{{ $type->id }}" {{ $type->id == old('type_id', '') ? 'selected' : ''}}>{{ $type->name }}</option>
       @endforeach
     </select>
+
+    @error('type')
+    <small class="text-danger">Please, fill the field correctly</small>
+    @enderror
+
+  </div>
+
+  <div class="mb-3">
+    <label for="type_id" class="form-label">Starting Date</label>
+    <input type="date" name="startingDate" id="startingDate" class="form-control @error('startingDate') is-invalid @enderror" value="{{ old('startingDate') }}" placeholder="Project startingDate">
+    
+    @error('startingDate')
+    <small class="text-danger">Please, fill the field correctly</small>
+    @enderror
 
   </div>
 
