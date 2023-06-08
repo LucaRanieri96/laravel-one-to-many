@@ -9,7 +9,7 @@
 
     <div class="card overflow-hidden">
         <div class="card-header bg-primary text-light">
-            <h2 class="mb-0">Projects resume</h2>
+            <h2 class="mb-0">{{ $project->slug }}</h2>
         </div>
         <div class="card-body bg-dark text-light">
             <h4>Project name:

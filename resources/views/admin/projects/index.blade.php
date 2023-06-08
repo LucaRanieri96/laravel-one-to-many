@@ -25,7 +25,7 @@
                 @forelse($projects as $project)
                     <tr>
                         <td scope="row">{{ $project->id }}</td>
-                        <td scope="row">{{ $project->slug }}</td>
+                        <td scope="row">{{ $project->name }}</td>
                         <td scope="row">{{ $project->repoUrl }}</td>
                         <td scope="row">{{ $project->startingDate }}</td>
                         <td scope="row"><span class="badge bg-dark"> {{ $project->type?->name }}</span></td>
@@ -49,12 +49,12 @@
                         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitle-{{ $project->id }}">Modal title</h5>
+                                    <h5 class="modal-title text-dark" id="modalTitle-{{ $project->id }}">Attenzione!</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
-                                    Body
+                                <div class="modal-body text-black">
+                                    Sicuro di voler cancellare la repo?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
